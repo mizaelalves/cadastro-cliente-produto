@@ -23,12 +23,16 @@ h5 {
 .item {
 
   background-color: #3B3E54;
-  width: 11rem;
+  width: 15rem;
   height: auto;
   font-size: 20px;
   padding-top: 12px;
   text-align: center;
-
+  #footer{
+    position: relative;
+    font-size: 10px;
+    top: 28rem;
+  }
   button {
     background-color: #040611;
     color: rgb(255, 255, 255);
