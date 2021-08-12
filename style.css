@@ -130,7 +130,9 @@ h5 {
   box-sizing: border-box;
   outline: none;
 }
-
+.table{
+  overflow:auto; 
+}
 table {
   background-color: #fff;
   margin: 25px auto;

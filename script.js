@@ -74,14 +74,14 @@ function cadCliente(id, name, date, cpf, cep, city, uf, bairro, rua, number) {
       rua: rua,
       number: number,
     };
-
+    if(auxRegistro != null){
   dadosClientes.push(auxRegistro);
 
   localStorage.setItem("dadosCliente", JSON.stringify(dadosClientes));
   console.log("Cliente " + auxRegistro.nome + " cadastrado");
 
   alert("Cliente " + auxRegistro.nome + " cadastrado");
-
+  }
   clientes();
   resetInput();
 }
@@ -172,12 +172,12 @@ function cadProduto(
     };
 
   dadosProdutos.push(auxRegistro);
-
+  if(auxRegistro != null){
   localStorage.setItem("dadosProdutos", JSON.stringify(dadosProdutos));
   console.log("Produto " + auxRegistro.nome + " cadastrado");
 
   alert("produto " + auxRegistro.nome + " cadastrado");
-
+  }
   produtos();
   resetInput();
 }
