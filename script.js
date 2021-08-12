@@ -41,7 +41,6 @@ function resetInput() {
   h.value = "";
   i.value = "";
   j.value = "";
-
 }
 
 function cadCliente(id, name, date, cpf, cep, city, uf, bairro, rua, number) {
@@ -84,7 +83,7 @@ function cadCliente(id, name, date, cpf, cep, city, uf, bairro, rua, number) {
   alert("Cliente " + auxRegistro.nome + " cadastrado");
 
   clientes();
-  resetInput()
+  resetInput();
 }
 
 function clientes() {
@@ -131,10 +130,8 @@ function getDataClientes() {
   if (str != null) dadosClientes = JSON.parse(str);
 }
 
-
 //produtos-------------------------------------------------------------
 console.log(dadosProdutos);
-
 
 function cadProduto(
   id,
@@ -145,7 +142,8 @@ function cadProduto(
   codigoBarras,
   peso,
   fornecedor
-) { if (dadosProdutos == null) {
+) {
+  if (dadosProdutos == null) {
     localStorage.setItem("dadosProdutos", "[]");
     dadosProdutos = [];
   }
@@ -158,7 +156,7 @@ function cadProduto(
     dataValidade == "" ||
     codigoBarras == "" ||
     peso == "" ||
-    fornecedor== ""
+    fornecedor == ""
   ) {
     alert("Preencha o campo");
   } else
@@ -181,11 +179,8 @@ function cadProduto(
   alert("produto " + auxRegistro.nome + " cadastrado");
 
   produtos();
-  resetInput()
+  resetInput();
 }
-
-
-
 
 function produtos() {
   getDataProdutos();
@@ -227,7 +222,6 @@ function getDataProdutos() {
   if (str != null) dadosProdutos = JSON.parse(str);
 }
 
-
 //--------------------------------------------------------------
 
 //hidden
@@ -237,12 +231,13 @@ function showClient() {
 
   document.getElementById("products").style.display = "none";
   document.getElementById("products").style.position = "absolute";
-  
-  document.getElementById("btn-client").style.color = "#040611"
-  document.getElementById("btn-products").style.color = "white"
-  
-  document.getElementById("btn-client").style.background = "#CEC5DB"
-  document.getElementById("btn-products").style.background = "#040611"
+
+  document.getElementById("btn-client").style.color = "#040611";
+  document.getElementById("btn-products").style.color = "white";
+
+  document.getElementById("btn-client").style.background = "#CEC5DB";
+  document.getElementById("btn-products").style.background = "#040611";
+  document.getElementById("footer").style.position = "relative";
 }
 
 function showProduct() {
@@ -252,12 +247,11 @@ function showProduct() {
   document.getElementById("client").style.display = "none";
   document.getElementById("client").style.position = "absolute";
 
-  
-  document.getElementById("btn-products").style.color = "#040611"
-  document.getElementById("btn-client").style.color = "white"
-  
-  document.getElementById("btn-products").style.background = "#CEC5DB"
-  document.getElementById("btn-client").style.background = "#040611"
-}
+  document.getElementById("btn-products").style.color = "#040611";
+  document.getElementById("btn-client").style.color = "white";
 
+  document.getElementById("btn-products").style.background = "#CEC5DB";
+  document.getElementById("btn-client").style.background = "#040611";
+  document.getElementById("footer").style.position = "relative";
+}
 document.getElementById("date").innerHTML = new Date().getFullYear();
