@@ -1,6 +1,49 @@
 var dadosClientes = JSON.parse(localStorage.getItem("dadosCliente"));
 var dadosProdutos = JSON.parse(localStorage.getItem("dadosProdutos"));
 
+function resetInput() {
+  var a = document.getElementById("pId");
+  var b = document.getElementById("pNome");
+  var c = document.getElementById("pQuantidade");
+  var d = document.getElementById("pDataFabricacao");
+  var e = document.getElementById("pDataValidade");
+  var f = document.getElementById("pCodigoBarras");
+  var g = document.getElementById("pPeso");
+  var h = document.getElementById("pFornecedor");
+
+  a.value = "";
+  b.value = "";
+  c.value = "";
+  d.value = "";
+  e.value = "";
+  f.value = "";
+  g.value = "";
+  h.value = "";
+
+  var a = document.getElementById("cId");
+  var b = document.getElementById("cNome");
+  var c = document.getElementById("cDataNascimento");
+  var d = document.getElementById("cCpf");
+  var e = document.getElementById("cCep");
+  var f = document.getElementById("cCidade");
+  var g = document.getElementById("cUf");
+  var h = document.getElementById("cBairro");
+  var i = document.getElementById("cRua");
+  var j = document.getElementById("cNumero");
+
+  a.value = "";
+  b.value = "";
+  c.value = "";
+  d.value = "";
+  e.value = "";
+  f.value = "";
+  g.value = "";
+  h.value = "";
+  i.value = "";
+  j.value = "";
+
+}
+
 function cadCliente(id, name, date, cpf, cep, city, uf, bairro, rua, number) {
   if (dadosClientes == null) {
     localStorage.setItem("dadosCliente", "[]");
@@ -42,30 +85,6 @@ function cadCliente(id, name, date, cpf, cep, city, uf, bairro, rua, number) {
 
   clientes();
   resetInput()
-}
-
-function resetInput() {
-  var a = document.getElementById("cId");
-  var b = document.getElementById("cNome");
-  var c = document.getElementById("cDataNascimento");
-  var d = document.getElementById("cCpf");
-  var e = document.getElementById("cCep");
-  var f = document.getElementById("cCidade");
-  var g = document.getElementById("cUf");
-  var h = document.getElementById("cBairro");
-  var i = document.getElementById("cRua");
-  var j = document.getElementById("cNumero");
-
-  a.value = "";
-  b.value = "";
-  c.value = "";
-  d.value = "";
-  e.value = "";
-  f.value = "";
-  g.value = "";
-  h.value = "";
-  i.value = "";
-  j.value = "";
 }
 
 function clientes() {
@@ -165,25 +184,7 @@ function cadProduto(
   resetInput()
 }
 
-function resetInput() {
-  var a = document.getElementById("pId");
-  var b = document.getElementById("pNome");
-  var c = document.getElementById("pQuantidade");
-  var d = document.getElementById("pDataFabricacao");
-  var e = document.getElementById("pDataValidade");
-  var f = document.getElementById("pCodigoBarras");
-  var g = document.getElementById("pPeso");
-  var h = document.getElementById("pFornecedor");
 
-  a.value = "";
-  b.value = "";
-  c.value = "";
-  d.value = "";
-  e.value = "";
-  f.value = "";
-  g.value = "";
-  h.value = "";
-}
 
 
 function produtos() {
@@ -231,17 +232,32 @@ function getDataProdutos() {
 
 //hidden
 function showClient() {
-  document.getElementById("client").style.visibility = "visible";
+  document.getElementById("client").style.display = "flex";
   document.getElementById("client").style.position = "relative";
 
-  document.getElementById("products").style.visibility = "hidden";
+  document.getElementById("products").style.display = "none";
   document.getElementById("products").style.position = "absolute";
+  
+  document.getElementById("btn-client").style.color = "#040611"
+  document.getElementById("btn-products").style.color = "white"
+  
+  document.getElementById("btn-client").style.background = "#CEC5DB"
+  document.getElementById("btn-products").style.background = "#040611"
 }
 
 function showProduct() {
-  document.getElementById("products").style.visibility = "visible";
+  document.getElementById("products").style.display = "flex";
   document.getElementById("products").style.position = "relative";
 
-  document.getElementById("client").style.visibility = "hidden";
+  document.getElementById("client").style.display = "none";
   document.getElementById("client").style.position = "absolute";
+
+  
+  document.getElementById("btn-products").style.color = "#040611"
+  document.getElementById("btn-client").style.color = "white"
+  
+  document.getElementById("btn-products").style.background = "#CEC5DB"
+  document.getElementById("btn-client").style.background = "#040611"
 }
+
+document.getElementById("date").innerHTML = new Date().getFullYear();

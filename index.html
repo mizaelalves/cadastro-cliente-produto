@@ -12,13 +12,13 @@
 
 <body>
   <div class="item">
-    <div>
+    <div class="box">
       <h5>E-commerce Admin</h5>
       <div class="itens">
-        <button type="button" onClick="showClient()">Clientes</button>
-        <button type="button" onClick="showProduct()">Produtos</button>
+        <button id="btn-client" type="button" onClick="showClient()">Clientes</button>
+        <button id="btn-products" type="button" onClick="showProduct()">Produtos</button>
       </div>
-      <p id="footer">Developed by Mizael Alves da Silva. 2021 All rights reserved<p>
+     
     </div>
   </div>
 
@@ -119,8 +119,13 @@
         </thread>
       </table>
     </div>
+
+
   </div>
 
+  <div class="footer">
+    <p>Developed by Mizael Alves da Silva. <span id="date">2021</span> All rights reserved</p>
+  </div>
 
 </body>
 <script>

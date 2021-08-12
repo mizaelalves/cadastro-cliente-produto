@@ -9,7 +9,6 @@ body {
   margin: 0px;
   padding: 0px;
   min-height: 100vh;
-  display: flex;
   font-family: "Roboto", sans-serif;
   background-color: #040611;
   color: #CEC5DB;
@@ -20,17 +19,12 @@ h5 {
 }
 
 .item {
+  display: flex;
   background-color: #3B3E54;
-  width: 15rem;
   height: auto;
   font-size: 20px;
   padding-top: 12px;
   text-align: center;
-}
-.item #footer {
-  position: relative;
-  font-size: 10px;
-  top: 28rem;
 }
 .item button {
   background-color: #040611;
@@ -46,11 +40,12 @@ h5 {
   flex-direction: column;
 }
 
+.box {
+  background-color: #3B3E54;
+}
+
 #client {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
+  display: none;
   position: relative;
 }
 #client button {
@@ -84,24 +79,10 @@ h5 {
   box-sizing: border-box;
   outline: none;
 }
-#client .table {
-  display: flex;
-  width: 100%;
-  margin-top: 2px;
-  text-align: left;
-}
-#client .table table,
-#client .table th,
-#client .table td {
-  border-collapse: collapse;
-}
 
 #products {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  position: absolute;
+  display: none;
+  position: relative;
 }
 #products button {
   background-color: #CEC5DB;
@@ -134,16 +115,42 @@ h5 {
   box-sizing: border-box;
   outline: none;
 }
-#products .table {
-  display: flex;
-  width: 100%;
-  margin-top: 2px;
-  text-align: left;
-}
-#products .table table,
-#products .table th,
-#products .table td {
+
+table {
+  background-color: #fff;
+  margin: 25px auto;
   border-collapse: collapse;
+  border: 1px solid #eee;
+  border-bottom: 2px solid #555;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1), 0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 20px rgba(0, 0, 0, 0.05), 0px 30px 20px rgba(0, 0, 0, 0.05);
+}
+table th, table td {
+  background-color: #CEC5DB;
+  color: black;
+  border: 1px solid #eee;
+  padding: 12px 35px;
+  border-collapse: collapse;
+}
+table th {
+  background: #3B3E54;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+table th.last {
+  border-right: none;
+}
+
+.footer {
+  margin-top: 0;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+}
+.footer p {
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
