@@ -28,25 +28,25 @@
         <form name="fclient">
           <h4>Clientes</h4>
           <label>iD</label><br />
-          <input id="cId" type="text" name="txtId" placeholder="id" required/><br />
+          <input id="cId" type="text" name="txtId" placeholder="Digite seu iD" required/><br />
           <label>Nome</label><br />
-          <input id="cNome" type="text" name="txtName" placeholder="nome" required/><br />
+          <input id="cNome" type="text" name="txtName" placeholder="Digite seu Nome" required/><br />
           <label>Data de nascimento</label><br />
-          <input id="cDataNascimento" type="text" name="txtData" placeholder="Data de nascimento" required/><br />
+          <input id="cDataNascimento" type="text" name="txtData" placeholder="Digite seu Data de nascimento" required/><br />
           <label>CPF</label><br />
-          <input id="cCpf" type="text" name="txtCpf" placeholder="CPF" required/><br />
+          <input id="cCpf" type="text" name="txtCpf" placeholder="Digite seu CPF" required/><br />
           <label>CEP</label><br />
-          <input id="cCep" type="text" name="txtCep" placeholder="CEP" required/><br />
+          <input id="cCep" type="text" name="txtCep" placeholder="Digite seu CEP" required/><br />
           <label>Cidade</label><br />
-          <input id="cCidade" type="text" name="txtCity" placeholder="Cidade" required/><br />
+          <input id="cCidade" type="text" name="txtCity" placeholder="Digite sua Cidade" required/><br />
           <label>UF</label><br />
-          <input id="cUf" type="text" name="txtUf" placeholder="UF" required/><br />
+          <input id="cUf" type="text" name="txtUf" placeholder="Digite seu UF" required/><br />
           <label>Bairro</label><br />
-          <input id="cBairro" type="text" name="bairro" placeholder="Bairro" required/><br />
+          <input id="cBairro" type="text" name="bairro" placeholder="Digite seu Bairro" required/><br />
           <label>Rua</label><br />
-          <input id="cRua" type="text" name="txtRua" placeholder="Rua" required/><br />
+          <input id="cRua" type="text" name="txtRua" placeholder="Digite seu Rua" required/><br />
           <label>Número</label><br />
-          <input id="cNumero" type="text" name="numero" placeholder="Number" required/><br />
+          <input id="cNumero" type="text" name="numero" placeholder="Digite o numero da casa" required/><br />
           <button type="button"
             onClick="cadCliente(txtId.value, txtName.value,txtData.value, txtCpf.value, txtCep.value, txtCity.value, txtUf.value, bairro.value, txtRua.value, numero.value)">
             Cadastrar
@@ -80,21 +80,21 @@
         <form name="fproducts">
           <h4>Produtos</h4>
           <label>iD</label><br />
-          <input id="pId" type="text" name="txtId" placeholder="id" required /><br />
+          <input id="pId" type="text" name="txtId" placeholder="Digite o iD" required /><br />
           <label>Nome</label><br />
-          <input id="pNome" type="text" name="txtNome" placeholder="nome" required /><br />
+          <input id="pNome" type="text" name="txtNome" placeholder="Digite o Nome" required /><br />
           <label>Quantidade</label><br />
-          <input id="pQuantidade" type="text" name="txtQuantidade" placeholder="Quantidade" required /><br />
+          <input id="pQuantidade" type="text" name="txtQuantidade" placeholder="Digite a Quantidade" required /><br />
           <label>Data de fabricação</label><br />
-          <input id="pDataFabricacao" type="text" name="txtDataFabricacao" placeholder="Data de fabricação" required /><br />
+          <input id="pDataFabricacao" type="text" name="txtDataFabricacao" placeholder="Digite a Data de fabricação" required /><br />
           <label>Data de validade</label><br />
-          <input id="pDataValidade" type="text" name="txtDataValidade" placeholder="Data de validade" required /><br />
+          <input id="pDataValidade" type="text" name="txtDataValidade" placeholder="Digite a Data de validade" required /><br />
           <label>Codigo de barras</label><br />
-          <input id="pCodigoBarras" type="text" name="txtCodigo" placeholder="Codigo de barras" required /><br />
+          <input id="pCodigoBarras" type="text" name="txtCodigo" placeholder="Digite o Codigo de barras" required /><br />
           <label>Peso</label><br />
-          <input id="pPeso" type="text" name="txtPeso" placeholder="Peso" required /><br />
+          <input id="pPeso" type="text" name="txtPeso" placeholder="Digite o Peso" required /><br />
           <label>Fornecedor</label><br />
-          <input id="pFornecedor" type="text" name="txtFornecedor" placeholder="Fornecedor" required /><br />
+          <input id="pFornecedor" type="text" name="txtFornecedor" placeholder="Digite o Fornecedor" required /><br />
           <button type="button"
             onClick="cadProduto(txtId.value, txtNome.value,txtQuantidade.value, txtDataFabricacao.value, txtDataValidade.value, txtCodigo.value, txtPeso.value, txtFornecedor.value)"
             id="button" name="enviar">
