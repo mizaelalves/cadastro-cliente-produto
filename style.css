@@ -134,10 +134,6 @@ h5 {
   outline: none;
 }
 
-.register-products {
-  visibility: hidden;
-}
-
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
