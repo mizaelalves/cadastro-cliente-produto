@@ -3,16 +3,18 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+
 }
 
 body {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   margin: 0px;
   padding: 0px;
-  min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   background-color: whitesmoke;
   color: #3B3E54;
+  min-width: 600px;
+  max-width: 2000px
 }
 
 h5 {
@@ -27,6 +29,7 @@ h5 {
   padding-top: 12px;
   text-align: center;
   color: #CEC5DB;
+
   button {
 
     background-color: #040611;
@@ -69,6 +72,7 @@ h5 {
   button:hover {
     background-color: #3B3E54;
   }
+
   button:active {
     border-left: 2px solid rgba(255, 255, 255, 0.645);
     border-top: 2px solid white;
@@ -80,11 +84,12 @@ h5 {
   }
 
   .register-client {
-
+    height: 80vh;
     padding-top: 0px;
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 12px;
+    overflow: auto;
 
     label {
       font-size: 12px;
@@ -106,7 +111,6 @@ h5 {
 
 #products {
   display: none;
-
   position: relative;
 
   button {
@@ -120,9 +124,11 @@ h5 {
     cursor: pointer;
 
   }
+
   button:hover {
     background-color: #3B3E54;
   }
+
   button:active {
     border-left: 2px solid rgba(255, 255, 255, 0.645);
     border-top: 2px solid white;
@@ -157,8 +163,38 @@ h5 {
 
 }
 
+.register-products{
+  visibility: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.table{
+  overflow: auto;
+  height: 80vh;
+
+}
 
 table {
+  
   background-color: #fff;
   margin: 25px auto;
   border-collapse: collapse;
